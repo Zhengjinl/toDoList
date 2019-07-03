@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view>判断显示与隐藏</view>
+  <button bindtap='showLogs' class='logBtn'>时间日志</button>
+</view>

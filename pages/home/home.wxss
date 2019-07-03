@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.logBtn{
+  width: 100px;
+  height: 50px;
+  background-color: #dedede;
+}
