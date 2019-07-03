@@ -17,15 +17,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页1"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "日志2"
       },
       {
         "pagePath": "pages/home/home",
-        "text": "home"
+        "text": "home3"
       }
     ]
   }
