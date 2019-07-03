@@ -8,7 +8,7 @@ Page({
 
   },
   showLogs:function() {
-    console.error('跳转到log页面')
+    console.error('跳转到log页面11111111')
     wx.navigateTo({
       url: '../logs/logs',
     })
