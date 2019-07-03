@@ -8,7 +8,7 @@ Page({
 
   },
   showLogs:function() {
-    console.error('跳转到log页面11111111')
+    console.error('跳转到log页面第一次修改纪录')
     wx.navigateTo({
       url: '../logs/logs',
     })
