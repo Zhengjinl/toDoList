@@ -18,15 +18,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页1"
+        "text": "首页",
+        "iconPath": "static/images/nav1.png",
+        "selectedIconPath": "static/images/nav1.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志2"
+        "text": "日志2",
+        "iconPath": "static/images/nav1.png",
+        "selectedIconPath": "static/images/nav1.png"
       },
       {
         "pagePath": "pages/home/home",
-        "text": "home3"
+        "text": "日历",
+        "iconPath": "static/images/nav1.png",
+        "selectedIconPath": "static/images/nav1.png"
       }
     ]
   }
