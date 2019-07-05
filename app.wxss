@@ -1,10 +1,37 @@
 /**app.wxss**/
 .container {
+  padding: 0 .65rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
   box-sizing: border-box;
+  background: #f1d1d1;
+  font-size: 28rpx;
 } 
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.font-s{
+  font-size: 24rpx;
+}
+.font-c{
+  font-size: 32rpx
+}
+.font-b{
+  font-size: 36rem;
+}
+.clearfix:after{
+  content: '';
+  display: bloak;
+  clear: both;
+}
+.col-black{
+  color: #333;
+}
+.col-grey{
+  color: #999;
+}
+.align-c{
+  text-align: center;
+}

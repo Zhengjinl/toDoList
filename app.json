@@ -1,15 +1,17 @@
 {
   "pages": [
+    "pages/todoDetail/todoDetail",
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/home",
     "pages/publish/publish",
     "pages/calendar/calendar"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "待办事项",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

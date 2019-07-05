@@ -1,13 +1,30 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 第一次修改纪录 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+<view class="container" style='min-height:{{wHeight}}px;'>
+<!-- 头部信息 -->
+  <view class="header clearfix font-c">
+    <image bindtap="bindViewTap" class="userinfo-avatar fl" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class='user-name fl'>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-job font-s col-grey">{{userInfo.job}}</text>
+    </view>
+    <view class='data-time fr '>
+    {{time.data}}    {{time.week}}
+    </view>
+
+  </view>
+  <view class='content'>
+    <!-- 重要紧急事件列表 -->
+    <block wx:for='{{todoList}}' wx:for-index="idx" wx:for-item="list">
+      <view class='list-box'>
+        <view class='title align-c'>{{list.title}}</view>
+        <view class='lists'>
+          <view class='list-item' wx:for='{{list.cont}}'>
+            {{index+1}}. {{item}}
+          </view>
+        </view>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  
+  
 </view>

@@ -1,21 +1,64 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header {
+  height: 120rpx;
+  padding: 20rpx 0;
+  overflow:hidden;
+  _zoom:1;
+  margin-bottom: 20rpx;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
   border-radius: 50%;
+  margin-right: 20rpx;
 }
-
+.user-name{
+  height: 100rpx;
+  padding: 10rpx;
+}
+.user-name text{
+  display: block;
+}
 .userinfo-nickname {
-  color: #aaa;
+  margin-top: 10rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.data-time{
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.list-box{
+  width: 300rpx;
+  /* height: 450rpx; */
+  background: rgb(243, 212, 144);
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+}
+.list-box .title{
+  height: 40rpx;
+  line-height: 40rpx;
+  background: rgb(168, 159, 104);
+  border-radius: 20rpx 20rpx 0 0;
+}
+.list-box .lists{
+  height: 380rpx;
+  padding: 0 10rpx;
+  overflow: auto;
+}
+.list-box .list-item{
+  height: 40rpx;
+  line-height: 40rpx;
+  border-bottom: 1px solid #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-box .list-item:last-child{
+  border-bottom: none;
 }
