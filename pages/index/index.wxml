@@ -1,6 +1,6 @@
 <!--index.wxml-->
-<view class="container" style='min-height:{{wHeight}}px;'>
-<!-- 头部信息 -->
+<view class="container" style='height:{{wHeight}}px;'>
+  <!-- 头部信息 -->
   <view class="header clearfix font-c">
     <image bindtap="bindViewTap" class="userinfo-avatar fl" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <view class='user-name fl'>
@@ -8,23 +8,37 @@
       <text class="userinfo-job font-s col-grey">{{userInfo.job}}</text>
     </view>
     <view class='data-time fr '>
-    {{time.data}}    {{time.week}}
+      {{time.data}} {{time.week}}
     </view>
 
   </view>
+  <!-- 列表信息 -->
   <view class='content'>
     <!-- 重要紧急事件列表 -->
-    <block wx:for='{{todoList}}' wx:for-index="idx" wx:for-item="list">
+    <block wx:for='{{todoList}}' wx:for-index='idx' wx:for-item='list' wx:key=''>
       <view class='list-box'>
-        <view class='title align-c'>{{list.title}}</view>
+        <view class='title align-c' bindtap='gotoList' data-index='{{idx}}'>{{list.title}}</view>
         <view class='lists'>
-          <view class='list-item' wx:for='{{list.cont}}'>
-            {{index+1}}. {{item}}
+          <view class='list-item' wx:for='{{list.cont}}' wx:key='' data-id='{{item.id}}' data-index='{{idx}}' bindtap='gotoDetail'>
+            {{index+1}}. {{item.todoName}}
           </view>
         </view>
       </view>
     </block>
   </view>
-  
-  
+  <!-- 首次进入首页弹框提醒重要事件 -->
+  <view class="mask" hidden='{{tipHide}}'>
+    <view class="tip-cont">
+      <view class='tip-title align-c font-b'>
+        {{todoList[1].title}}
+        <text class='tip-close col-grey font-b fr' bindtap='closeTip'>x</text>
+      </view>
+      <view class='tip-list'>
+        <view class='tip-list-item' wx:for='{{todoList[1].cont}}' wx:key=''>
+          <text class='tip-icon fl'>。</text> {{item.todoName}}
+        </view>
+      </view>
+      <view class='tip-go-list align-c' bindtap='gotoList' data-index='1'>查看详情</view>
+    </view>
+  </view>
 </view>

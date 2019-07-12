@@ -1,7 +1,7 @@
 /**index.wxss**/
 .header {
   height: 120rpx;
-  padding: 20rpx 0;
+  padding: 20rpx 10rpx;
   overflow:hidden;
   _zoom:1;
   margin-bottom: 20rpx;
@@ -28,6 +28,7 @@
   line-height: 120rpx;
 }
 .content{
+  padding: 0 .65rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -61,4 +62,45 @@
 }
 .list-box .list-item:last-child{
   border-bottom: none;
+}
+/* 首页重要事情弹框 */
+.tip-cont{
+  position: absolute;
+  width: 560rpx;
+  height: 800rpx;
+  top: 50%;
+  left: 50%;
+  margin: -400rpx 0 0 -280rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+.tip-title{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tip-close{
+  margin-right:20rpx;
+}
+.tip-list{
+  padding: 0 20rpx;
+  height: 600rpx;
+  overflow: auto;
+}
+.tip-list-item{
+  line-height: 66rpx;
+}
+.tip-icon{
+  display: inline-block;
+  font-size: 48rpx;
+  color: #999;
+  margin-top: -15rpx;
+}
+.tip-go-list{
+  width: 400rpx;
+  margin: 10rpx auto 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background: #eee;
+  border: 1px solid #ddd;
 }

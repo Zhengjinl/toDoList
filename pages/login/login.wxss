@@ -1,0 +1,75 @@
+/* pages/login/login.wxss */
+
+.info-box {
+  padding: 0 20rpx;
+}
+
+.info-box .title {
+  margin: 40rpx 0 80rpx;
+}
+
+.info-int input {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ddd;
+  padding: 0 10rpx;
+}
+
+.message-box {
+  position: relative;
+}
+
+.get-message-code {
+  display: inline-block;
+  position: absolute;
+  top: 10rpx;
+  right: 0;
+  padding: 10rpx;
+  background: linear-gradient(to right, rgb(109, 75, 233),rgb(143, 228, 243));
+  border-radius: 6rpx;
+  color: #fff;
+}
+
+.info-btns {
+  text-align: right;
+  color: rgb(57, 132, 207);
+  margin: 20rpx 0 0;
+}
+
+.info-btns text {
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.login-btn {
+  width: 700rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: none;
+  margin-top: 20rpx;
+  background: #eee;
+  color: #333;
+}
+
+.login-btn.active {
+  background: rgb(41, 177, 64);
+  color: #fff;
+}
+
+.other-logins {
+  position: absolute;
+  left: 20rpx;
+  bottom: 100rpx;
+}
+.other-login-title{
+  margin-bottom: 20rpx;
+}
+
+.wechat-login {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: rgb(59, 161, 187);
+  border: none;
+  color: #fff;
+}

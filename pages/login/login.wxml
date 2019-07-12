@@ -1,0 +1,40 @@
+<view class='info-box'>
+<!-- 登录 -->
+<block wx:if='{{loginRegister==0}}'>
+  <view class='title font-b bold'>账号登录</view>
+  <view class='info-int font-c'>
+    <input type='text' confirm-type='next' placeholder='请输入手机号/账户名' bindinput='changeName'></input>
+    <input type='password' confirm-type='done' placeholder='请输入密码' bindinput='changePassword'></input>
+    <view class='info-btns font-s'>
+      <text class='gorget-password'>忘记密码</text>
+      <text class='register' bindtap='loginRegister' data-id='1'>注册</text>
+    </view>
+    <button wx:if='{{isLogBtnActive}}' class='login-btn active' bindtap='goLogin'>登录</button>
+    <button wx:else class='login-btn'>登录</button>
+  </view>
+</block>
+<block wx:else>
+  <view class='title font-b bold'>账号注册</view>
+  <view class='info-int font-c'>
+    <input type='text' confirm-type='number' placeholder='请输入手机号' bindinput='registerName'></input>
+    <view class='message-box'>
+      <input type='password' confirm-type='done' placeholder='请输入密码' bindinput='registerPassword'></input>
+      <text class='get-message-code' bindtap='getCode'>获取验证码</text>
+    </view>
+    <view class='info-btns font-s'>
+      <text class='register' bindtap='loginRegister' data-id='0'>登录</text>
+    </view>
+    <button wx:if='{{isRegBtnActive}}' class='login-btn active' bindtap='goRegister'>注册</button>
+    <button wx:else class='login-btn'>注册</button>
+  </view>
+</block>
+
+
+
+
+  
+  <view class='other-logins'>
+    <view class='other-login-title col-grey font-c'>其他登录方式</view>
+    <button class='wechat-login' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">微信登录</button>
+  </view>
+</view>

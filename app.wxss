@@ -1,10 +1,10 @@
 /**app.wxss**/
 .container {
-  padding: 0 .65rem;
-  height: 100%;
   box-sizing: border-box;
-  background: #f1d1d1;
+  background: rgb(248, 213, 217);
   font-size: 28rpx;
+  position: relative;
+  overflow: auto;
 } 
 .fl{
   float: left;
@@ -19,7 +19,7 @@
   font-size: 32rpx
 }
 .font-b{
-  font-size: 36rem;
+  font-size: 36rpx;
 }
 .clearfix:after{
   content: '';
@@ -34,4 +34,16 @@
 }
 .align-c{
   text-align: center;
+}
+.bold{
+  font-weight: bold;
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .65);
+  top: 0;
+  left: 0;
+  z-index: 2;
 }

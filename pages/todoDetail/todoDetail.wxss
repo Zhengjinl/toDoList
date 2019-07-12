@@ -1,1 +1,29 @@
 /* pages/todoDetail/todoDetail.wxss */
+.container{
+  background: #fff;
+}
+.todo-details{
+  margin: 20rpx;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 40rpx 30rpx;
+}
+.todo-details textarea{
+  width: 100%;
+}
+.todo-item{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-period{
+  height: 120rpx;
+  line-height: 60rpx;
+  padding: 20rpx;
+}
+.todo-time-name{
+  display: block;
+}

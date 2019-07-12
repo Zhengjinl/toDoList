@@ -1,12 +1,30 @@
 <!--pages/todoDetail/todoDetail.wxml-->
 <view class='container'>
   <view class='todo-details'>
-  
+    <textarea value='{{todo.cont}}'></textarea>
   </view>
-  <view class='priority-level'>
-    
+  <view class='todo-item  priority-level'>
+    <text class='col-grey'>重要级别</text>
+    <text>{{todo.leval}}</text>
   </view>
-  <view class='progress-bar'></view>
-  <view class='todo-time'></view>
-  <view class='todo-time-detail'></view>
+  <view class='todo-item progress-bar'>
+    <text class='col-grey'>任务进度</text>
+    <text>{{todo.progress}}</text>
+  </view>
+  <view class='todo-item todo-allday'>
+    <text class=''>全天</text>
+    <switch wx:if='{{todo.isAllDay}}' checked bindchange="switch1Change"/>
+    <switch wx:else bindchange="switch1Change"/>
+  </view>
+  <view class='todo-item todo-period'>
+    <view class='todo-starttime'>
+      <text class='col-grey todo-time-name'>开始时间</text>
+      <text>{{todo.startTime}}</text>
+    </view>
+    <view class='arrow'>></view>
+    <view class='todo-endtime'>
+      <text class='col-grey todo-time-name'>结束时间</text>
+      <text>{{todo.endTime}}</text>
+    </view>
+  </view>
 </view>

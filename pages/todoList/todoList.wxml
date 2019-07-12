@@ -1,0 +1,19 @@
+<!--pages/todoList/todoList.wxml-->
+<loading wx:if='{{loading}}'>加载中。。。</loading>
+<view class='container' style='height:{{wHeight}}px;'>
+  <view class='title'>
+    <text class='font-b'>{{title}}</text>
+    <text class='item-size'>共{{todoSize}}项</text>
+    <icon type='waiting' size='26' color='orange' class='title-icon fr'></icon>
+  </view>
+  <view class='todo-list'>
+    <view class='todo-list-item' wx:for='{{todoList}}' wx:key='' wx:for-index='idx' wx:for-item='list'>
+      <view class='list-date'>{{list.date}}</view>
+      <view class='list-box'>
+        <view class='list-item' wx:for='{{list.todoList}}' wx:key='' data-id='{{item.id}}' bindtap='gotoDetail'>
+        {{item.todoName}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
